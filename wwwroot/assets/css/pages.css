@@ -1,0 +1,257 @@
+/* ==========================================================
+   Project Clarity — Page-specific styles
+   ========================================================== */
+
+/* Home */
+.home-philosophy .card {
+    text-align: left;
+}
+
+/* About */
+.about-story p {
+    max-width: 680px;
+}
+
+/* Consultation process steps */
+.process-steps {
+    counter-reset: step;
+}
+
+.process-steps .card h3::before {
+    counter-increment: step;
+    content: counter(step) ". ";
+    color: var(--color-accent);
+}
+
+/* Legal pages */
+.legal-content h2 {
+    font-size: 1.35rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content p {
+    margin-bottom: var(--space-md);
+}
+
+/* 404 */
+.error-code {
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 12vw, 7rem);
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: var(--space-md);
+    opacity: 0.85;
+    animation: error-soft-in 0.8s ease both;
+}
+
+.error-hero .error-quote {
+    margin-bottom: var(--space-xl);
+    animation: error-soft-in 0.9s ease 0.12s both;
+}
+
+.error-hero h1 {
+    animation: error-soft-in 0.9s ease 0.2s both;
+}
+
+.error-hero .lead,
+.error-hero .hero-actions,
+.error-hero .error-links {
+    animation: error-soft-in 0.9s ease 0.28s both;
+}
+
+.error-links {
+    margin-top: var(--space-2xl);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+    .error-links a {
+        color: var(--color-primary);
+        font-weight: 500;
+        margin-inline: 0.35rem;
+    }
+
+        .error-links a:hover {
+            color: var(--color-accent-dark);
+        }
+
+@keyframes error-soft-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .error-code,
+    .error-hero .error-quote,
+    .error-hero h1,
+    .error-hero .lead,
+    .error-hero .hero-actions,
+    .error-hero .error-links {
+        animation: none;
+    }
+}
+
+
+/* Credential line on home */
+.credential-line {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+    max-width: 520px;
+}
+
+.cross-link {
+    margin-top: var(--space-md);
+    font-size: 0.95rem;
+}
+.cross-link a {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.form-fees-note {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-top: var(--space-md);
+    max-width: 520px;
+}
+.form-fees-note a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Topic cards */
+.topic-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 1.25rem;
+    max-width: 720px;
+    margin-inline: auto;
+    list-style: none;
+}
+.topic-cards li {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1.1rem;
+    color: var(--color-text-light);
+    font-size: 0.975rem;
+}
+@media (max-width: 600px) {
+    .topic-cards { grid-template-columns: 1fr; }
+}
+
+/* 4-column process on desktop */
+.cards-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+    .cards-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .cards-4 { grid-template-columns: 1fr; }
+}
+
+/* Wizard */
+.narrow-form {
+    max-width: 720px;
+    margin-inline: auto;
+}
+.wizard-progress {
+    margin-bottom: var(--space-xl);
+}
+.wizard-step-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.wizard-bar {
+    height: 6px;
+    background: var(--color-border-light);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.wizard-bar-fill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+.wizard-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    color: var(--color-primary);
+}
+.wizard-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    margin-top: var(--space-xl);
+}
+.field-hint {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}
+.field-error {
+    font-size: 0.8rem;
+    color: var(--color-error);
+    min-height: 1.1em;
+}
+input.is-invalid,
+textarea.is-invalid,
+select.is-invalid {
+    border-color: var(--color-error);
+}
+.confirm-box {
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+.confirm-box p {
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+.confirm-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Image crop preference — keep faces in frame */
+.hero-media img,
+.page-hero .hero-media img {
+    object-position: top center;
+}
+
+
+.is-hidden {
+    display: none !important;
+}
+.consent-error {
+    color: var(--color-error);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+#form-status {
+    min-height: 1.25em;
+}

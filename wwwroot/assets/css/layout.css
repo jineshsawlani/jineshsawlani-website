@@ -1,0 +1,353 @@
+/* ==========================================================
+   Project Clarity — Global Layout
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* -------------------------
+   CONTAINER
+------------------------- */
+
+.container {
+    width: min(92%, var(--container-width));
+    margin-inline: auto;
+}
+
+.container.narrow,
+.narrow {
+    max-width: var(--content-width);
+}
+
+/* -------------------------
+   SECTION
+------------------------- */
+
+.section {
+    padding-block: var(--space-5xl);
+}
+
+.section-alt {
+    background: var(--color-surface);
+    padding-block: var(--space-5xl);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 640px;
+    margin-inline: auto;
+    margin-bottom: var(--space-3xl);
+}
+
+.section-header .eyebrow {
+    margin-bottom: var(--space-md);
+}
+
+.section-header h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.section-header p {
+    margin-bottom: 0;
+    color: var(--color-text-light);
+}
+
+/* -------------------------
+   TYPOGRAPHY
+------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: var(--line-height-heading);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.75rem);
+    margin-bottom: var(--space-lg);
+}
+
+h2 {
+    font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+    margin-bottom: var(--space-xl);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-md);
+}
+
+h4 {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-light);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.lead {
+    font-size: var(--font-size-md);
+    line-height: 1.75;
+    color: var(--color-text-light);
+}
+
+.eyebrow {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+}
+
+/* -------------------------
+   PAGE HERO
+------------------------- */
+
+.page-hero {
+    padding-top: calc(var(--header-height) + var(--space-4xl));
+    padding-bottom: var(--space-4xl);
+}
+
+.page-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.page-hero-content .lead {
+    margin-bottom: var(--space-lg);
+}
+
+.page-hero.text-center,
+.page-hero .text-center {
+    text-align: center;
+}
+
+.page-hero .narrow {
+    margin-inline: auto;
+}
+
+/* -------------------------
+   HOME HERO
+------------------------- */
+
+.hero {
+    position: relative;
+    padding-top: calc(var(--header-height) + var(--space-5xl));
+    padding-bottom: var(--space-5xl);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 15%, rgba(176, 141, 87, 0.09), transparent 45%);
+    pointer-events: none;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-4xl);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin-bottom: var(--space-xl);
+}
+
+.hero-introduction {
+    font-size: 1.15rem;
+    max-width: 520px;
+    margin-bottom: var(--space-xl);
+}
+
+/* -------------------------
+   MEDIA
+------------------------- */
+
+.hero-media,
+.page-hero .hero-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-media img,
+.page-hero .hero-media img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 5;
+}
+
+/* -------------------------
+   CTA BAND
+------------------------- */
+
+.cta {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding-block: var(--space-4xl);
+}
+
+.cta h2 {
+    color: #fff;
+    margin-bottom: var(--space-lg);
+}
+
+.cta p {
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 560px;
+    margin-inline: auto;
+    margin-bottom: var(--space-xl);
+}
+
+.cta .hero-actions {
+    margin-top: 0;
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+.site-footer {
+    background: #1f332b;
+    color: #fff;
+    padding-top: var(--space-3xl);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+}
+
+.footer-top h3,
+.footer-top h4 {
+    color: #fff;
+    margin-bottom: var(--space-lg);
+}
+
+.footer-top p,
+.footer-top a {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-top a:hover {
+    color: #fff;
+}
+
+.footer-links ul li,
+.footer-legal ul li {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl) 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: var(--font-size-sm);
+}
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 900px) {
+    .hero-grid,
+    .page-hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .hero-media,
+    .page-hero .hero-media {
+        order: -1;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero,
+    .page-hero {
+        padding-top: calc(var(--header-height) + var(--space-3xl));
+        padding-bottom: var(--space-3xl);
+    }
+
+    .section,
+    .section-alt {
+        padding-block: var(--space-3xl);
+    }
+
+    h1 {
+        font-size: clamp(2rem, 7vw, 2.6rem);
+    }
+}
