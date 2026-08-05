@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Jinesh Savlani</title>
+    <meta name="description" content="Get in touch with Jinesh Savlani for general enquiries. For a chart consultation, use the Clarity Consultation request form.">
+    <meta name="author" content="Jinesh Savlani">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-grid">
+                    <div class="page-hero-content">
+                        <p class="eyebrow">Contact</p>
+                        <h1>I’d Love To Hear From You</h1>
+                        <p class="lead">
+                            Questions about the website, general enquiries, or anything that is
+                            not a full chart consultation — you’re welcome to write here.
+                        </p>
+                        <p class="form-fees-note">
+                            For a full chart consultation, please use
+                            <a href="clarity-consultation-request.html">Request a Clarity Consultation</a>
+                            so birth details can be collected properly.
+                        </p>
+                    </div>
+                    <div class="hero-media">
+                        <img
+                            src="assets/images/contact/contact-banner.jpg"
+                            alt="Contact"
+                            width="560"
+                            height="700"
+                            loading="eager"
+                            decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cards">
+                    <article class="card">
+                        <h3>Email</h3>
+                        <p>General enquiries and feedback.</p>
+                        <p><a href="mailto:hello@jineshsavlani.com">hello@jineshsavlani.com</a></p>
+                    </article>
+                    <article class="card">
+                        <h3>Consultations</h3>
+                        <p>For a reading, use the dedicated request form.</p>
+                        <p><a href="clarity-consultation-request.html">Request Consultation →</a></p>
+                    </article>
+                    <article class="card">
+                        <h3>Response Time</h3>
+                        <p>I aim to reply within two business days.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container narrow-form">
+                <div id="form-wrapper">
+                    <div class="section-header">
+                        <p class="eyebrow">Message</p>
+                        <h2>Send a Note</h2>
+                    </div>
+
+                    <form
+                        id="contact-form"
+                        action="https://formspree.io/f/xvzenvpr"
+                        method="POST"
+                        novalidate>
+
+                        <input type="hidden" name="_subject" value="Website Contact Message">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                                <input type="text" id="full-name" name="full_name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Please Select</option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                    <option value="Consultation Question">Consultation Question</option>
+                                    <option value="Website Feedback">Website Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="message">Your Message <span aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" required rows="6"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="consent-box">
+                            <label>
+                                <input type="checkbox" name="agree_privacy" value="yes" required>
+                                I agree to the <a href="privacy-policy.html">Privacy Policy</a>.
+                            </label>
+                        </div>
+
+                        <div class="text-center" style="margin-top: 1.5rem;">
+                            <button type="submit" class="button button-primary button-large" id="submit-btn">
+                                Send Message
+                            </button>
+                            <p id="form-status" class="mt-2" style="font-size: 0.9rem; color: var(--color-text-muted);" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="form-success" class="form-success" hidden>
+                    <h2>Message Received</h2>
+                    <p class="lead">Thank you for writing.</p>
+                    <p>I will reply as soon as I can — usually within two business days.</p>
+                    <div class="hero-actions center mt-4">
+                        <a href="index.html" class="button button-primary">Return Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container narrow">
+                <h2>Looking for a consultation?</h2>
+                <p>The request form collects birth details so I can prepare properly.</p>
+                <div class="hero-actions center">
+                    <a href="clarity-consultation-request.html" class="button button-primary">
+                        Request a Clarity Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/component-loader.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+</body>
+</html>

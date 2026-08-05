@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Clarity Consultation | Jinesh Savlani</title>
+    <meta name="description" content="Request a Clarity Consultation. Share your birth details and priority questions.">
+    <meta name="author" content="Jinesh Savlani">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-grid">
+                    <div class="page-hero-content">
+                        <p class="eyebrow">Consultation Request</p>
+                        <h1>Let’s Begin With Understanding</h1>
+                        <p class="lead">
+                            Share your birth details and the questions on your mind.
+                            The more context you give, the better I can prepare.
+                        </p>
+                        <p class="form-fees-note">
+                            Fees and the full process are described on the
+                            <a href="clarity-consultation.html">Clarity Consultation</a> page
+                            (₹11,000 / USD 111, with flexibility if cost is a barrier).
+                        </p>
+                    </div>
+                    <div class="hero-media">
+                        <img
+                            src="assets/images/consultation/consultation-request.jpg"
+                            alt="Consultation request"
+                            width="560"
+                            height="700"
+                            loading="eager"
+                            decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Before You Begin</p>
+                    <h2>What Happens After You Submit</h2>
+                </div>
+                <div class="cards process-steps">
+                    <article class="card">
+                        <h3>Review</h3>
+                        <p>I read every request myself, usually within two business days.</p>
+                    </article>
+                    <article class="card">
+                        <h3>WhatsApp contact</h3>
+                        <p>I will contact you on WhatsApp to confirm details and agree a time for the first online meeting.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Two conversations</h3>
+                        <p>An introductory meeting first, then detailed study, then a findings conversation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container narrow-form">
+                <div id="form-wrapper">
+                    <div class="section-header">
+                        <p class="eyebrow">Request Form</p>
+                        <h2>Your Details</h2>
+                        <p>All information is treated as confidential.</p>
+                    </div>
+
+                    <div class="wizard-progress" id="wizard-progress" aria-live="polite">
+                        <span class="wizard-step-label">Step <span id="step-current">1</span> of 4</span>
+                        <div class="wizard-bar"><div class="wizard-bar-fill" id="wizard-bar-fill" style="width:25%"></div></div>
+                    </div>
+
+                    <form
+                        id="consultation-request-form"
+                        class="consultation-form"
+                        action="https://formspree.io/f/xvzenvpr"
+                        method="POST"
+                        novalidate>
+
+                        <input type="hidden" name="_subject" value="New Clarity Consultation Request">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <!-- STEP 1: Contact -->
+                        <div class="wizard-panel is-active" data-step="1">
+                            <h3 class="wizard-title">Contact</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="full-name" name="full_name" required autocomplete="name">
+                                    <span class="field-error" data-for="full-name"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                                    <input type="email" id="email" name="email" required autocomplete="email">
+                                    <span class="field-error" data-for="email"></span>
+                                </div>
+                                <div class="form-group form-group-full">
+                                    <label for="phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="Include country code if outside India">
+                                    <span class="field-error" data-for="phone"></span>
+                                    <p class="field-hint">I will reach you on WhatsApp to schedule the first online meeting.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: Birth -->
+                        <div class="wizard-panel" data-step="2" hidden>
+                            <h3 class="wizard-title">Birth Details</h3>
+                            <p class="field-hint" style="margin-bottom:1rem;">Needed to prepare your horoscope accurately. Please use the exact birth city as on record.</p>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="date-of-birth">Date of Birth <span aria-hidden="true">*</span></label>
+                                    <input type="date" id="date-of-birth" name="date_of_birth" required>
+                                    <p class="field-hint">Use the calendar picker. On the next steps we show the date as day/month/year.</p>
+                                    <span class="field-error" data-for="date-of-birth"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time-of-birth">Time of Birth <span aria-hidden="true">*</span></label>
+                                    <input type="time" id="time-of-birth" name="time_of_birth" required>
+                                    <span class="field-error" data-for="time-of-birth"></span>
+                                </div>
+                                <div class="form-group form-group-full">
+                                    <label for="place-of-birth">Place of Birth (City, State, Country) <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="place-of-birth" name="place_of_birth" required placeholder="e.g. Mumbai, Maharashtra, India">
+                                    <span class="field-error" data-for="place-of-birth"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Priority + schedule preference -->
+                        <div class="wizard-panel" data-step="3" hidden>
+                            <h3 class="wizard-title">Your Priority &amp; Timing</h3>
+                            <div class="form-group form-group-full">
+                                <label for="priority">What is the main area of life you want clarity on? <span aria-hidden="true">*</span></label>
+                                <textarea id="priority" name="priority" required rows="4" placeholder="e.g. career direction, marriage timing, a specific decision — one or two priorities is ideal"></textarea>
+                                <span class="field-error" data-for="priority"></span>
+                                <p class="field-hint">Focus on what matters most right now. You can mention a second area if needed.</p>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="preferred-date">Preferred date for first meeting <span class="optional">(Optional)</span></label>
+                                    <input type="date" id="preferred-date" name="preferred_date">
+                                    <!--<p class="field-hint">Day / month / year (IST).</p>-->
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferred-time">Preferred time <span class="optional">(Optional)</span></label>
+                                    <input type="time" id="preferred-time" name="preferred_time">
+                                </div>
+                            </div>
+                            <p class="field-hint">
+                                Preferred times are in <strong>IST (India Standard Time)</strong>. This is only a preference —
+                                I will confirm the final date and time with you on WhatsApp. Meetings are online video calls.
+                            </p>
+                        </div>
+
+                        <!-- STEP 4: Confirm + consent -->
+                        <div class="wizard-panel" data-step="4" hidden>
+                            <h3 class="wizard-title">Confirm Birth Details</h3>
+                            <p class="field-hint">Please check these carefully — the chart depends on them.</p>
+                            <div class="confirm-box" id="birth-confirm-box">
+                                <p><strong>Date of birth:</strong> <span id="confirm-dob">—</span></p>
+                                <p><strong>Time of birth:</strong> <span id="confirm-tob">—</span></p>
+                                <p><strong>Place of birth:</strong> <span id="confirm-pob">—</span></p>
+                            </div>
+
+                            <div class="consent-box">
+                                <p id="consent-error" class="consent-error" role="alert" hidden></p>
+                                <label>
+                                    <input type="checkbox" name="confirm_birth" value="yes" required>
+                                    Birth details above are accurate to the best of my knowledge.
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="understand_guidance" value="yes" required>
+                                    I understand astrology offers guidance, not guaranteed outcomes.
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="agree_policies" value="yes" required>
+                                    I agree to the <a href="privacy-policy.html">Privacy Policy</a>, <a href="terms-and-conditions.html">Terms</a> and <a href="disclaimer.html">Disclaimer</a>.                                    
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="wizard-nav">
+                            <button type="button" class="button button-secondary is-hidden" id="wizard-back">Back</button>
+                            <button type="button" class="button button-primary" id="wizard-next">Continue</button>
+                            <button type="submit" class="button button-primary button-large is-hidden" id="submit-btn">
+                                Submit Consultation Request
+                            </button>
+                        </div>
+                        <p id="form-status" class="mt-2 text-center" style="font-size: 0.9rem; color: var(--color-text-muted);" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div id="form-success" class="form-success" hidden>
+                    <h2>Thank You</h2>
+                    <p class="lead">Your request has been received.</p>
+                    <p>
+                        I will review your details personally and get back to you on WhatsApp —
+                        usually within two business days — to confirm the first meeting.
+                    </p>
+                    <p>
+                        After that introductory conversation I will study the chart in depth,
+                        then we will schedule the findings conversation.
+                    </p>
+                    <div class="hero-actions center mt-4">
+                        <a href="index.html" class="button button-primary">Return Home</a>
+                        <a href="philosophy.html" class="button button-secondary">Read the Philosophy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/component-loader.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+</body>
+</html>
