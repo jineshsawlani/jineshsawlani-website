@@ -151,7 +151,7 @@
                                 <div class="form-group">
                                     <label for="preferred-date">Preferred date for first meeting <span class="optional">(Optional)</span></label>
                                     <input type="date" id="preferred-date" name="preferred_date">
-                                    <!--<p class="field-hint">Day / month / year (IST).</p>-->
+                                    <p class="field-hint">Day / month / year (IST).</p>
                                 </div>
                                 <div class="form-group">
                                     <label for="preferred-time">Preferred time <span class="optional">(Optional)</span></label>
@@ -169,9 +169,18 @@
                             <h3 class="wizard-title">Confirm Birth Details</h3>
                             <p class="field-hint">Please check these carefully — the chart depends on them.</p>
                             <div class="confirm-box" id="birth-confirm-box">
-                                <p><strong>Date of birth:</strong> <span id="confirm-dob">—</span></p>
-                                <p><strong>Time of birth:</strong> <span id="confirm-tob">—</span></p>
-                                <p><strong>Place of birth:</strong> <span id="confirm-pob">—</span></p>
+                                <div class="confirm-row">
+                                    <span class="confirm-label">Birth Date</span>
+                                    <span class="confirm-value" id="confirm-dob">—</span>
+                                </div>
+                                <div class="confirm-row">
+                                    <span class="confirm-label">Birth Time</span>
+                                    <span class="confirm-value" id="confirm-tob">—</span>
+                                </div>
+                                <div class="confirm-row">
+                                    <span class="confirm-label">Birth Place</span>
+                                    <span class="confirm-value" id="confirm-pob">—</span>
+                                </div>
                             </div>
 
                             <div class="consent-box">
@@ -186,7 +195,7 @@
                                 </label>
                                 <label>
                                     <input type="checkbox" name="agree_policies" value="yes" required>
-                                    <span>I agree to the <a href="privacy-policy.html">Privacy Policy</a>, <a href="terms-and-conditions.html">Terms</a> and <a href="disclaimer.html">Disclaimer</a>.</span>
+                                    I agree to the <a href="privacy-policy.html">Privacy Policy</a>, <a href="terms-and-conditions.html">Terms</a> and <a href="disclaimer.html">Disclaimer</a>.
                                 </label>
                             </div>
                         </div>

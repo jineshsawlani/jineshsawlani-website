@@ -166,16 +166,28 @@ function initConsultationWizard() {
         return d + "/" + m + "/" + y;
     }
 
+    function formatDisplayTime(value) {
+        if (!value || !/^\d{1,2}:\d{2}/.test(value)) return value || "—";
+        const parts = value.split(":");
+        let h = parseInt(parts[0], 10);
+        const min = parts[1].slice(0, 2);
+        if (Number.isNaN(h)) return value;
+        const suffix = h >= 12 ? "PM" : "AM";
+        h = h % 12;
+        if (h === 0) h = 12;
+        return h + ":" + min + " " + suffix;
+    }
+
     function fillBirthConfirm() {
         const dob = form.querySelector("#date-of-birth")?.value || "";
-        const tob = form.querySelector("#time-of-birth")?.value || "—";
+        const tob = form.querySelector("#time-of-birth")?.value || "";
         const pob = form.querySelector("#place-of-birth")?.value || "—";
         const elDob = document.getElementById("confirm-dob");
         const elTob = document.getElementById("confirm-tob");
         const elPob = document.getElementById("confirm-pob");
         if (elDob) elDob.textContent = formatDisplayDate(dob);
-        if (elTob) elTob.textContent = tob;
-        if (elPob) elPob.textContent = pob;
+        if (elTob) elTob.textContent = formatDisplayTime(tob);
+        if (elPob) elPob.textContent = pob || "—";
     }
 
     if (btnNext) {

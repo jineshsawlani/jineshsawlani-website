@@ -227,14 +227,30 @@ select.is-invalid {
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     margin-bottom: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
-.confirm-box p {
-    margin-bottom: 0.5rem;
+
+.confirm-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.confirm-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+}
+
+.confirm-value {
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--color-text);
 }
-.confirm-box p:last-child {
-    margin-bottom: 0;
-}
+
 
 /* Image crop preference — keep faces in frame */
 .hero-media img,
