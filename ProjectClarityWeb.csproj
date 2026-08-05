@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="docs\clarity-consultation-request.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="docs\clarity-consultation-request.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
