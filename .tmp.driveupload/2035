@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PendingCommit>
-  <CommitComment>Step 4 - Confirm + Consent</CommitComment>
+  <CommitComment>Restored lost changes from Grok's latest</CommitComment>
   <PinnedBranches />
   <PublishPrompt Enabled="True" />
   <ActiveAccountPrompt Enabled="True" />
