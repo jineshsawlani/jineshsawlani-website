@@ -56,7 +56,7 @@ function initAjaxForms() {
                     const data = await response.json().catch(() => ({}));
                     const message =
                         data.errors?.map((e) => e.message).join(", ") ||
-                        "Something went wrong. Please try again or email hello@jineshsavlani.com.";
+                        "Something went wrong. Please try again or email support@jineshsavlani.com.";
                     if (status) status.textContent = message;
                     if (button) {
                         button.disabled = false;
@@ -68,7 +68,7 @@ function initAjaxForms() {
             } catch (error) {
                 if (status) {
                     status.textContent =
-                        "Network error. Please try again or email hello@jineshsavlani.com.";
+                        "Network error. Please try again or email support@jineshsavlani.com.";
                 }
                 if (button) {
                     button.disabled = false;
