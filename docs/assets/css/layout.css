@@ -338,21 +338,21 @@ p:last-child {
 @media (max-width: 768px) {
     .hero,
     .page-hero {
-        padding-top: calc(var(--header-height) + var(--space-2xl));
-        padding-bottom: var(--space-2xl);
+        padding-top: calc(var(--header-height) + var(--space-xl));
+        padding-bottom: var(--space-xl);
     }
 
     .section,
     .section-alt {
-        padding-block: var(--space-2xl);
+        padding-block: var(--space-xl);
     }
 
     .section-header {
-        margin-bottom: var(--space-2xl);
+        margin-bottom: var(--space-xl);
     }
 
     .cta {
-        padding-block: var(--space-3xl);
+        padding-block: var(--space-2xl);
     }
 
     /* Slightly wider content on mobile for better use of space */
@@ -376,5 +376,11 @@ p:last-child {
 
     p {
         line-height: 1.7;
+    }
+
+    /* Reduce the large empty feel between hero content and following section */
+    .hero-actions {
+        margin-top: var(--space-lg);
+        margin-bottom: 0;
     }
 }
