@@ -338,16 +338,43 @@ p:last-child {
 @media (max-width: 768px) {
     .hero,
     .page-hero {
-        padding-top: calc(var(--header-height) + var(--space-3xl));
-        padding-bottom: var(--space-3xl);
+        padding-top: calc(var(--header-height) + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
     }
 
     .section,
     .section-alt {
+        padding-block: var(--space-2xl);
+    }
+
+    .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+
+    .cta {
         padding-block: var(--space-3xl);
+    }
+
+    /* Slightly wider content on mobile for better use of space */
+    .container {
+        width: min(94%, var(--container-width));
     }
 
     h1 {
         font-size: clamp(2rem, 7vw, 2.6rem);
+    }
+
+    /* Body text readability */
+    body {
+        font-size: 1.0625rem; /* 17px */
+    }
+
+    .lead {
+        font-size: 1.125rem;
+        line-height: 1.7;
+    }
+
+    p {
+        line-height: 1.7;
     }
 }

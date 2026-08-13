@@ -7,10 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="docs\assets\css\components.css" />
+    <None Remove="docs\assets\css\layout.css" />
     <None Remove="docs\clarity-consultation-request.html" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="docs\assets\css\components.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="docs\assets\css\layout.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="docs\clarity-consultation-request.html">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
