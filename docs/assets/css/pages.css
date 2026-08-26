@@ -315,6 +315,21 @@
     border-top: 1px solid var(--color-border);
 }
 
+.articles-coming-next {
+    max-width: 680px;
+    margin: var(--space-3xl) auto 0;
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.articles-coming-next h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.articles-coming-next p {
+    margin-bottom: 0;
+}
+
 @media (max-width: 700px) {
     .article-grid {
         grid-template-columns: 1fr;
