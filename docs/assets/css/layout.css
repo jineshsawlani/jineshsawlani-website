@@ -68,12 +68,12 @@ textarea {
 ------------------------- */
 
 .section {
-    padding-block: var(--space-4xl);
+    padding-block: 5rem;
 }
 
 .section-alt {
     background: var(--color-surface);
-    padding-block: var(--space-4xl);
+    padding-block: 5rem;
 }
 
 .section-header {
@@ -108,7 +108,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(2.4rem, 5vw, 3.75rem);
+    font-size: clamp(2.4rem, 4.6vw, 3.45rem);
+    line-height: 1.16;
     margin-bottom: var(--space-lg);
 }
 
@@ -157,7 +158,7 @@ p:last-child {
 ------------------------- */
 
 .page-hero {
-    padding-top: calc(var(--header-height) + var(--space-4xl));
+    padding-top: var(--space-3xl);
     padding-bottom: var(--space-3xl);
 }
 
@@ -187,8 +188,8 @@ p:last-child {
 
 .hero {
     position: relative;
-    padding-top: calc(var(--header-height) + var(--space-5xl));
-    padding-bottom: var(--space-4xl);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     overflow: hidden;
 }
 
@@ -325,7 +326,7 @@ p:last-child {
     .hero-media,
     .page-hero .hero-media {
         order: -1;
-        max-width: 420px;
+        max-width: 360px;
         margin-inline: auto;
     }
 
@@ -338,13 +339,13 @@ p:last-child {
 @media (max-width: 768px) {
     .hero,
     .page-hero {
-        padding-top: calc(var(--header-height) + var(--space-md));
-        padding-bottom: var(--space-xl);
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-2xl);
     }
 
     .section,
     .section-alt {
-        padding-block: var(--space-xl);
+        padding-block: var(--space-2xl);
     }
 
     .section-header {
@@ -366,7 +367,12 @@ p:last-child {
 
     /* Body text readability */
     body {
-        font-size: 1.0625rem; /* 17px */
+        font-size: var(--font-size-base);
+    }
+
+    .hero-media,
+    .page-hero .hero-media {
+        max-width: 340px;
     }
 
     .lead {
