@@ -44,11 +44,17 @@ function initialiseNavigation() {
 }
 
 function highlightCurrentNav() {
-    const path = window.location.pathname.split("/").pop() || "index.html";
+    const locationPath = window.location.pathname;
+    const path = locationPath.split("/").pop() || "index.html";
+    const isArticlePage = locationPath.includes("/articles/");
     const links = document.querySelectorAll(".site-navigation a");
+
     links.forEach((link) => {
         const href = link.getAttribute("href");
-        if (href === path || (path === "" && href === "index.html")) {
+        const isCurrentPage = href === path || (path === "" && href === "index.html");
+        const isArticlesSection = isArticlePage && href === "articles.html";
+
+        if (isCurrentPage || isArticlesSection) {
             link.setAttribute("aria-current", "page");
         }
     });
