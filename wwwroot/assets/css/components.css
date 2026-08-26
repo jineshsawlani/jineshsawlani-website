@@ -433,6 +433,7 @@ textarea {
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 
     .form-grid {
@@ -480,20 +481,22 @@ textarea {
         white-space: normal;
     }
 
-    /* Cards — better readability + balanced internal space */
+    /* Mobile cards — stronger type with compact, balanced spacing */
     .card {
-        padding: 1.5rem 1.35rem;
+        padding: 1.35rem 1.25rem;
+        border-radius: var(--radius-md);
     }
 
     .card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.55rem;
+        font-size: 1.4rem;
+        line-height: 1.25;
+        margin-bottom: 0.45rem;
     }
 
     .card p {
-        font-size: 1.05rem;          /* main readability fix */
-        line-height: 1.65;
-        margin-bottom: 0.75rem;
+        font-size: 1.0625rem;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
     }
 
     .card a {
