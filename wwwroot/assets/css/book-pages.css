@@ -318,6 +318,17 @@
     color: var(--color-accent-dark);
 }
 
+.optional-label {
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+}
+
+.reviewer-name .question-label {
+    margin-bottom: var(--space-sm);
+}
+
 .choice-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
