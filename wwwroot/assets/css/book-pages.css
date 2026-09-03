@@ -1,0 +1,309 @@
+/* Book contents and reviewer feedback pages */
+
+.book-page-hero,
+.feedback-page-hero {
+    background: radial-gradient(circle at 50% 0%, rgba(176, 141, 87, 0.12), transparent 58%);
+}
+
+.book-page-hero .lead,
+.feedback-page-hero .lead {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.book-subtitle {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    margin-bottom: var(--space-md);
+}
+
+.book-contents {
+    max-width: 900px;
+}
+
+.front-matter,
+.book-part {
+    margin-bottom: var(--space-4xl);
+}
+
+.front-matter {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.part-label,
+.chapter-number {
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.front-matter h2,
+.part-header h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.front-matter-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm) var(--space-xl);
+}
+
+.front-matter-list li,
+.chapter-card details li,
+.part-details li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--color-text-light);
+}
+
+.front-matter-list li::before,
+.chapter-card details li::before,
+.part-details li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent);
+}
+
+.contents-controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.details-control {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-round);
+    padding: 0.55rem 1rem;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.details-control:hover,
+.details-control:focus-visible {
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+}
+
+.part-header {
+    border-bottom: 2px solid var(--color-accent-light);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+}
+
+.part-header > p:not(.part-label) {
+    max-width: 760px;
+}
+
+.chapter-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.chapter-card h3 {
+    font-size: clamp(1.55rem, 2.8vw, 1.9rem);
+    margin: var(--space-xxs) 0 var(--space-sm);
+}
+
+.chapter-card > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.chapter-card details,
+.part-details {
+    border-top: 1px solid var(--color-border-light);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+}
+
+.chapter-card summary,
+.part-details summary {
+    color: var(--color-primary);
+    cursor: pointer;
+    font-weight: 600;
+    padding: var(--space-xs) 0;
+}
+
+.chapter-card details ul,
+.part-details ul {
+    display: grid;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding-bottom: var(--space-xs);
+}
+
+.appendices .chapter-card {
+    border-left-color: var(--color-accent);
+}
+
+.feedback-section {
+    padding-top: var(--space-xl);
+}
+
+.feedback-container {
+    max-width: 780px;
+}
+
+.reviewer-form {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.feedback-question {
+    margin: 0;
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.feedback-question legend,
+.question-label {
+    display: block;
+    width: 100%;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: clamp(1.3rem, 2.5vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: var(--space-lg);
+}
+
+.question-number,
+.required-mark {
+    color: var(--color-accent-dark);
+}
+
+.choice-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+}
+
+.choice-list label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+
+.choice-list label:hover,
+.choice-list label:focus-within {
+    border-color: var(--color-primary-light);
+    background: var(--color-surface-alt);
+}
+
+.choice-list input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.22rem;
+    flex-shrink: 0;
+    accent-color: var(--color-primary);
+}
+
+.textarea-label {
+    display: block;
+    margin: var(--space-xl) 0 var(--space-sm);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.feedback-question textarea {
+    min-height: 120px;
+}
+
+.field-error {
+    min-height: 0;
+    margin: var(--space-sm) 0 0;
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+}
+
+.feedback-submit {
+    text-align: center;
+}
+
+.feedback-submit #form-status {
+    min-height: 1.5em;
+    margin-top: var(--space-md);
+    margin-bottom: 0;
+    color: var(--color-error);
+}
+
+.reviewer-success {
+    max-width: 680px;
+    margin-inline: auto;
+}
+
+.honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 700px) {
+    .front-matter-list,
+    .choice-list {
+        grid-template-columns: 1fr;
+    }
+
+    .front-matter,
+    .feedback-question {
+        padding: var(--space-lg);
+    }
+
+    .front-matter,
+    .book-part {
+        margin-bottom: var(--space-2xl);
+    }
+
+    .chapter-card {
+        padding: var(--space-lg);
+        border-left-width: 3px;
+    }
+
+    .contents-controls {
+        justify-content: flex-start;
+    }
+}
