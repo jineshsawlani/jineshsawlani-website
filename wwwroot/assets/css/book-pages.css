@@ -66,9 +66,6 @@
 }
 
 .part-jump-nav {
-    position: sticky;
-    top: calc(var(--header-height) + 0.75rem);
-    z-index: 20;
     display: flex;
     gap: var(--space-xs);
     overflow-x: auto;
@@ -386,15 +383,6 @@
     margin-inline: auto;
 }
 
-.honeypot {
-    position: absolute !important;
-    left: -9999px !important;
-    width: 1px !important;
-    height: 1px !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -408,10 +396,6 @@
 }
 
 @media (max-width: 768px) {
-    .part-jump-nav {
-        top: 0.5rem;
-    }
-
     .ascendant-grid {
         grid-template-columns: 1fr;
     }
