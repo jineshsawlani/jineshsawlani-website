@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewer Feedback Form | Foundations of Vedic Astrology</title>
+    <meta name="description" content="Reviewer feedback form for Foundations of Vedic Astrology — A Practical Handbook for Beginners.">
+    <meta name="author" content="Jinesh Savlani">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/book-pages.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main>
+        <section class="page-hero feedback-page-hero">
+            <div class="container narrow text-center">
+                <p class="eyebrow">Foundations of Vedic Astrology</p>
+                <h1>Reviewer Feedback Form</h1>
+                <p class="book-subtitle">Foundations of Vedic Astrology — A Practical Handbook for Beginners</p>
+                <p class="lead">Thank you for reading this sample. Brief and honest responses are completely welcome.</p>
+            </div>
+        </section>
+
+        <section class="section feedback-section">
+            <div class="container feedback-container">
+                <div id="form-wrapper">
+                    <form id="reviewer-feedback-form" class="reviewer-form" action="https://formspree.io/f/mdeozbbd" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="Foundations of Vedic Astrology — Reviewer Feedback">
+                        <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <fieldset class="feedback-question">
+                            <legend><span class="question-number">1.</span> Before reading this sample, how familiar were you with Vedic Astrology? <span class="required-mark" aria-hidden="true">*</span><span class="sr-only">Required</span></legend>
+                            <div class="choice-list">
+                                <label><input type="radio" name="familiarity_before_reading" value="Not familiar" required> <span>Not familiar</span></label>
+                                <label><input type="radio" name="familiarity_before_reading" value="Slightly familiar"> <span>Slightly familiar</span></label>
+                                <label><input type="radio" name="familiarity_before_reading" value="Familiar with the basics"> <span>Familiar with the basics</span></label>
+                                <label><input type="radio" name="familiarity_before_reading" value="Experienced"> <span>Experienced</span></label>
+                            </div>
+                            <p class="field-error" data-for="familiarity_before_reading" role="alert"></p>
+                        </fieldset>
+
+                        <fieldset class="feedback-question">
+                            <legend><span class="question-number">2.</span> Did the explanations feel clear and approachable? <span class="required-mark" aria-hidden="true">*</span><span class="sr-only">Required</span></legend>
+                            <div class="choice-list">
+                                <label><input type="radio" name="clarity_and_approachability" value="Very clear" required> <span>Very clear</span></label>
+                                <label><input type="radio" name="clarity_and_approachability" value="Mostly clear"> <span>Mostly clear</span></label>
+                                <label><input type="radio" name="clarity_and_approachability" value="Sometimes difficult"> <span>Sometimes difficult</span></label>
+                                <label><input type="radio" name="clarity_and_approachability" value="Difficult to follow"> <span>Difficult to follow</span></label>
+                            </div>
+                            <p class="field-error" data-for="clarity_and_approachability" role="alert"></p>
+                            <label class="textarea-label" for="sections-requiring-rereading">Please mention any section or concept that required rereading:</label>
+                            <textarea id="sections-requiring-rereading" name="sections_requiring_rereading" rows="4"></textarea>
+                        </fieldset>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="reasoning-behind-interpretation"><span class="question-number">3.</span> Did the book explain the reasoning behind astrological interpretation, rather than merely presenting conclusions?</label>
+                            <textarea id="reasoning-behind-interpretation" name="reasoning_behind_interpretation" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="repetitive-or-detailed"><span class="question-number">4.</span> Did any section feel repetitive, overly detailed or longer than necessary?</label>
+                            <textarea id="repetitive-or-detailed" name="repetitive_overly_detailed_or_long" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="chapter-eight"><span class="question-number">5.</span> Did Chapter 8 help you understand how a Planet, Rashi and House are combined?</label>
+                            <textarea id="chapter-eight" name="chapter_8_understanding" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="structural-blueprint"><span class="question-number">6.</span> Was the Structural Blueprint method in Chapters 9 and 10 understandable? Did the Aries Ascendant chapter help demonstrate it clearly?</label>
+                            <textarea id="structural-blueprint" name="structural_blueprint_understanding" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="most-useful"><span class="question-number">7.</span> Which part of the sample did you find most useful or engaging?</label>
+                            <textarea id="most-useful" name="most_useful_or_engaging" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="continue-reading"><span class="question-number">8.</span> After reading this sample, would you be interested in continuing with the complete book? Why or why not?</label>
+                            <textarea id="continue-reading" name="interest_in_complete_book" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="improvements"><span class="question-number">9.</span> Is there anything you would improve, remove or explain differently?</label>
+                            <textarea id="improvements" name="improvements_removals_or_different_explanation" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-question">
+                            <label class="question-label" for="additional-comments">Additional comments:</label>
+                            <textarea id="additional-comments" name="additional_comments" rows="5"></textarea>
+                        </div>
+
+                        <div class="feedback-submit">
+                            <button type="submit" class="button button-primary button-large" id="submit-btn">Submit Feedback</button>
+                            <p id="form-status" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="form-success" class="form-success reviewer-success" hidden>
+                    <h2>Thank You for Your Feedback</h2>
+                    <p class="lead">Your response has been received. Thank you for taking the time to read the sample and share your honest thoughts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="assets/js/component-loader.js"></script>
+    <script src="assets/js/reviewer-feedback.js"></script>
+</body>
+</html>
