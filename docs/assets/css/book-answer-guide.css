@@ -1,0 +1,19 @@
+.guide-section { padding-top: var(--space-2xl); }
+.guide-container { max-width: 930px; }
+.guide-intro { padding: var(--space-xl); background: var(--color-surface-alt); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); }
+.guide-intro h2 { margin-bottom: var(--space-sm); }
+.guide-intro p:last-child { margin-bottom: 0; }
+.guide-nav { display: flex; flex-wrap: wrap; gap: .55rem; margin: var(--space-xl) 0 var(--space-2xl); scroll-margin-top: calc(var(--header-height) + 1rem); }
+.guide-nav a { padding: .55rem .8rem; border: 1px solid var(--color-border); border-radius: var(--radius-round); color: var(--color-primary); font-size: var(--font-size-sm); font-weight: 600; }
+.guide-nav a:hover, .guide-nav a:focus-visible { background: var(--color-surface-alt); border-color: var(--color-primary); }
+.guide-chapter { padding: var(--space-xl) 0 var(--space-2xl); border-top: 1px solid var(--color-border); scroll-margin-top: calc(var(--header-height) + 2rem); }
+.guide-chapter h2 { margin: .2rem 0 var(--space-lg); }
+.guide-chapter h3 { margin: var(--space-xl) 0 var(--space-sm); font-size: 1.3rem; }
+.guide-answer { margin: .5rem 0; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); background: var(--color-surface); }
+.guide-answer summary { padding: 1rem 1.15rem; color: var(--color-primary); font-weight: 600; line-height: 1.5; cursor: pointer; }
+.guide-answer summary:hover, .guide-answer summary:focus-visible { background: var(--color-surface-alt); }
+.guide-answer[open] summary { border-bottom: 1px solid var(--color-border-light); }
+.guide-answer-body { padding: 1rem 1.15rem 1.15rem; color: var(--color-text-light); }
+.guide-answer-body p { margin: 0; line-height: 1.75; }
+.guide-back { display: inline-block; margin-top: var(--space-lg); color: var(--color-primary); font-weight: 600; }
+@media (max-width: 700px) { .guide-intro { padding: var(--space-lg); } .guide-chapter { padding-block: var(--space-lg); } }
