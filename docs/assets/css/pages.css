@@ -429,8 +429,11 @@ select.is-invalid {
 }
 
 
-/* Image crop preference — keep faces in frame */
-.hero-media img,
+/* Keep homepage landscape framing centered; retain face-first framing for portrait sub-pages. */
+.hero .hero-media img {
+    object-position: center;
+}
+
 .page-hero .hero-media img {
     object-position: top center;
 }
