@@ -235,9 +235,21 @@ p:last-child {
 .page-hero .hero-media img {
     width: 100%;
     border-radius: var(--radius-xl);
-    object-fit: cover;
+    object-fit: contain;
     box-shadow: var(--shadow-lg);
+    aspect-ratio: auto;
+}
+
+/* The homepage hero uses a wide landscape image; never crop it into portrait shape. */
+.hero-media img {
+    aspect-ratio: 1902 / 827;
+    object-fit: contain;
+}
+
+/* About and consultation hero portraits retain their existing portrait treatment. */
+.page-hero .hero-media img {
     aspect-ratio: 4 / 5;
+    object-fit: cover;
 }
 
 /* -------------------------
