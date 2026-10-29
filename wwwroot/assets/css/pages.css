@@ -432,9 +432,8 @@ select.is-invalid {
 /* Image crop preference — keep faces in frame */
 .hero-media img,
 .page-hero .hero-media img {
-    object-position: top center;
+    object-position: 75% center;
 }
-
 
 .is-hidden {
     display: none !important;

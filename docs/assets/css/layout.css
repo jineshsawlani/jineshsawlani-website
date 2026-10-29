@@ -231,15 +231,15 @@ p:last-child {
     align-items: center;
 }
 
-.hero-media img,
-.page-hero .hero-media img {
-    width: 100%;
-    border-radius: var(--radius-xl);
-    object-fit: cover;
-    box-shadow: var(--shadow-lg);
-    aspect-ratio: 4 / 5;
-}
-
+    .hero-media img,
+    .page-hero .hero-media img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: center;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+    }
 /* -------------------------
    CTA BAND
 ------------------------- */
