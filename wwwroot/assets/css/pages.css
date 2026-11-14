@@ -432,7 +432,7 @@ select.is-invalid {
 /* Image crop preference — keep faces in frame */
 .hero-media img,
 .page-hero .hero-media img {
-    object-position: 75% center;
+    object-position: 30% center;
 }
 
 .is-hidden {
@@ -456,4 +456,9 @@ select.is-invalid {
     .process-steps .card {
         padding-top: 4rem;
     }
+}
+
+/* Contact page hero image */
+.page-hero .hero-media img.contact-hero-image {
+    object-position: center 45%;
 }
